@@ -11,7 +11,7 @@ Tested on the latest versions of the following browsers :
 Run index.html on any http server or check out the live demo on :
 ## [Demo](https://dazzling-payne-a42f49.netlify.com/)
 
-# Languages
+# Languages :
 * JS ES6
 * CSS3
 * HTML5
