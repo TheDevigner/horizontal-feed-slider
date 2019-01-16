@@ -2,14 +2,14 @@
 Horizontal Feed Slider 
 ------------------------------------------------------------------------------------------------------------
 
-# how to lunch :
-	- tested on the latest versions of the following browsers : 
-		+ chrome 
-		+ mozilla firefox
-		+ Opera
+# How to lunch :
+tested on the latest versions of the following browsers : 
++ chrome 
++ mozilla firefox
++ Opera
 
-	- Run index.html on any http server or check out the live demo on :
-		+ https://dazzling-payne-a42f49.netlify.com/
+Run index.html on any http server or check out the live demo on :
+		+ [Demo] (https://dazzling-payne-a42f49.netlify.com/)
 
 # Languages
 	- JS ES6
