@@ -9,7 +9,7 @@ tested on the latest versions of the following browsers :
 + Opera
 
 Run index.html on any http server or check out the live demo on :
-		+ [Demo] (https://dazzling-payne-a42f49.netlify.com/)
++ [Demo] (https://dazzling-payne-a42f49.netlify.com/)
 
 # Languages
 	- JS ES6
