@@ -1,6 +1,6 @@
 
-Horizontal Feed Slider 
-------------------------------------------------------------------------------------------------------------
+# Horizontal Feed Slider
+
 
 # How to lunch :
 Tested on the latest versions of the following browsers : 
