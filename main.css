@@ -1,0 +1,316 @@
+/* =====================================================================================
+
+    Table of contents
+    
+    1. Global Styles 
+    2. Header
+    3. Content
+    4. Footer
+======================================================================================== */
+
+
+/* =====================================================================================
+    1. Global Styles 
+======================================================================================== */
+
+:root {
+  /* colors */
+  --dark-grey-color: #30333b;
+  --light-grey-color: #4b4d55;
+  --grey-color: #3f414b;
+  --secondery-color: #00c29a;
+
+
+  /* footer and header */
+  --bars-height: 65px;
+
+  /* slider properties*/
+  --columns: 3;
+  --rows: 2;
+  --current-slide: 0;
+  --column-width: calc(1 / var(--columns) * 100vw);
+  --shift-slid: calc(var(--column-width) * var(--current-slide));
+}
+
+* {
+  margin: 0 0;
+  padding: 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* material icons */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  -webkit-font-feature-settings: 'liga';
+          font-feature-settings: 'liga';
+}
+
+body {
+  background: var(--dark-grey-color);
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+
+/* =====================================================================================
+    2. Header
+======================================================================================== */
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 23fr 3fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+  min-height: var(--bars-height);
+  background-color: var(--dark-grey-color);
+}
+
+header img {
+  height: 3.2rem;
+  margin: 0.4rem;
+}
+
+header h1 {
+  justify-self: start;
+  font-weight: 300;
+}
+
+header nav {
+  position: absolute;
+  right: 20px;
+}
+
+header nav button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  float: left;
+  background-color: var(--light-grey-color);
+  height: 50px;
+  width: 50px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+header nav button:hover {
+  background-color: #7e7f83;
+
+}
+
+header nav button i {
+  color: #fff;
+}
+
+/* =====================================================================================
+    3. Content
+======================================================================================== */
+section {
+  position: absolute;
+  top: var(--bars-height);
+  bottom: 70px;
+  width: 100%;
+}
+
+.slider-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  grid-auto-flow: column;
+  height: 100%;
+  background-color: var(--grey-color);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transform: translateX(var(--shift-slid));
+          transform: translateX(var(--shift-slid));
+}
+
+figure {
+  display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  position: relative;
+  width: var(--column-width);
+  cursor: pointer;
+  overflow: hidden;
+  background-color: var(--grey-color);
+}
+
+figure:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+figure:hover figcaption>button {
+  -webkit-box-shadow: 0 0 0 1rem #00c29b50;
+          box-shadow: 0 0 0 1rem #00c29b50;
+}
+
+figure>figcaption {
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 7rem;
+  position: absolute;
+  padding: 0 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+  /* IE6-9 */
+}
+
+figure>figcaption>h2 {
+  font-weight: 500;
+}
+
+figure>figcaption>button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-self: center;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background-color: #00c29a;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+figure>img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+
+/* quote bloc */
+.quote-bloc {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: block;
+  text-align: center;
+}
+
+.quote-bloc>i {
+  font-size: 10rem;
+  color: var(--light-grey-color);
+}
+
+.quote-bloc>h1 {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+/* end quote bloc */
+
+
+#slider-progress-bar {
+  position: absolute;
+  bottom: -5px;
+  width: var(--progress-bar-width);
+  height: 5px;
+  background-color: #00c29a;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+/* =====================================================================================
+    4. Footer
+======================================================================================== */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: var(--bars-height);
+  background-color: var(--dark-grey-color);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+footer a {
+  justify-self: end;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+footer a:hover {
+  color: rgb(184, 184, 184);
+}
+
+footer img {
+  justify-self: start;
+  height: 3.5rem;
+}
