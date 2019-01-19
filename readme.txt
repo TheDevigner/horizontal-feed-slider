@@ -21,7 +21,7 @@ Horizontal Feed Slider
 	  if non specified, parameters will be set to the default values :
 		rows = 2
 		columns = 3
-		autoplay = false
+		autoplay = true
 	
 	query examples :
 		https://dazzling-payne-a42f49.netlify.com/
