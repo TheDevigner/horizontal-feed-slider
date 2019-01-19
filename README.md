@@ -9,7 +9,7 @@ Tested on the latest versions of the following browsers :
 + Opera
 
 Run index.html on any http server or check out the live demo on :
-## [Demo](https://horizontal-feed-slider.netlify.com)
+## [Demo](https://horizontal-slider.netlify.com)
 
 # Languages :
 * JS ES6
@@ -26,8 +26,8 @@ if non specified, parameters will be set to the default values :
 	
 ## query examples :
 
-* https://horizontal-feed-slider.netlify.com
-* https://horizontal-feed-slider.netlify.com?columns=3&rows=2&autoplay=true
+* https://horizontal-slider.netlify.com
+* https://horizontal-slider.netlify.com?columns=3&rows=2&autoplay=true
 		
 running the app on http server is required to set conifg slider through query parameters.
 although you could always directly open the index.html on the browser.
