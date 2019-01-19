@@ -22,7 +22,7 @@ The slider columns and rows as well as autoplay ON/OFF can be specified through 
 if non specified, parameters will be set to the default values :
 + *rows = 2*
 + *columns = 3*
-+ *autoplay = true*
++ *autoplay = false*
 	
 ## query examples :
 
