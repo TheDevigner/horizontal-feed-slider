@@ -33,7 +33,7 @@ class Slider {
     this.docElementStyle.setProperty('--columns', this.grid_columns);
     this.docElementStyle.setProperty('--rows', this.grid_rows);
     this.docElementStyle.setProperty('--current-slide', this.current_slide);
-    sliderProgressBar.style.width = this.current_slide / this.slide_count * 100 + '%';
+    sliderProgressBar.style.width =  ( 1 + this.current_slide ) / (this.slide_count + 1) * 100 + '%';
   }
 
   nextSlide() {

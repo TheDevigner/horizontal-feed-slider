@@ -178,6 +178,7 @@ figure {
 figure:hover img {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
+  filter: brightness(80%);
 }
 
 figure:hover figcaption>button {
@@ -254,7 +255,7 @@ figure>img {
 }
 
 .quote-bloc>i {
-  font-size: 10rem;
+  font-size: 7rem;
   color: var(--light-grey-color);
 }
 
@@ -264,7 +265,21 @@ figure>img {
 }
 
 /* end quote bloc */
+.image-bloc .search-icone {
+  color : white;
+  position : absolute;
+  font-size: 30px;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%);
+  transition: top .2s ease-in;
+  visibility: hidden;
+}
 
+.image-bloc:hover > .search-icone{
+  visibility: visible;
+  top: 45%;
+}
 
 #slider-progress-bar {
   position: absolute;
@@ -272,8 +287,8 @@ figure>img {
   width: var(--progress-bar-width);
   height: 5px;
   background-color: #00c29a;
-  -webkit-transition: all .5s ease-in;
-  transition: all .5s ease-in;
+  -webkit-transition: width .5s ease-in;
+  transition: width .5s ease-in;
 }
 
 /* =====================================================================================
